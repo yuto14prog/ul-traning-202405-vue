@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vueサンプル</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>偶数</p>
+        <template v-for="number in data">
+            <li v-if="number % 2 === 0">{{ number }}</li>
+        </template>
+        <p>奇数</p>
+        <ul>
+            <li v-for="oddNumber in isOddNumbers">{{ oddNumber }}</li>
+        </ul>
+        <button v-on:click="addNumber">数値の追加</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

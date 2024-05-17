@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vueサンプル</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div id="app">
+            <p><span v-if="isDisplay">Hello Vue, isDisplay</span></p>
+            <p><span v-if="isDisplayFunction()">Hello Vue, isDisplayFunction()</span></p>
+            <p><span v-if="isDisplayComputed">Hello Vue, isDisplayComputed</span></p>
+            <p><span v-else="isDisplay">Hello Vue, isDisplay = false</span></p>
+        </div>
+        <ul>
+            <li v-for="item in list">
+                {{ item.text }}
+            </li>
+        </ul>
+        <ul>
+            <li v-for="(value, key) in listObject">
+                {{ key }}のテキストは{{ value.text }}
+            </li>
+        </ul>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
