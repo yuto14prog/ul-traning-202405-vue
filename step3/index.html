@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vueサンプル</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        .active { color: red; }
+        .decorated {text-decoration: underline; }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="message">
+        <p v-if="message.length > maxLength">テキストは{{ maxLength }}文字以下にしてください。</p>
+
+    <hr>
+
+    <ul>
+        <li v-for="(value, key) in list" v-bind:key="key">
+            {{ key }}のテキストは{{ value.text }}
+        </li>
+    </ul>
+
+    <hr>
+
+    <p v-bind:class="{ active: isActive }">テキスト</p>
+
+    <hr>
+
+    <div v-html="headLine"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
